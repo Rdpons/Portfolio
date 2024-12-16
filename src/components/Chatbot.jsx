@@ -22,7 +22,7 @@ const Chatbot = () => {
                 },
                 chatWindow: {
                     showTitle: true,
-                    title: 'Flowise Bot',
+                    title: 'Chat Bot',
                     titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     showAgentMessages: true,
                     welcomeMessage: 'Hello! This is custom welcome message',
