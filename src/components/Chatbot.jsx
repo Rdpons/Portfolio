@@ -3,8 +3,8 @@ import { BubbleChat } from 'flowise-embed-react';
 const Chatbot = () => {
   return (
     <BubbleChat
-            chatflowid="5ef8fbd3-2e52-408f-9caa-3bfd623ce72f" 
-            apiHost="https://flowiseai-flowise.hf.space"
+            chatflowid="21e83028-6052-44a0-b5ae-c943a0b1ca0f"
+            apiHost="https://talobellaoreo-ponsica.hf.space"
             theme={{
                 button: {
                     backgroundColor: "#3B81F6",
@@ -72,9 +72,9 @@ const Chatbot = () => {
                     },
                     footer: {
                         textColor: '#303235',
-                        text: 'Powered by',
-                        company: 'Flowise',
-                        companyLink: 'https://flowiseai.com',
+                        text: 'Created by',
+                        company: 'Rhodney Dame N. Ponsica',
+                        companyLink: 'https://ardii.vercel.app',
                     }
                 }
             }}
