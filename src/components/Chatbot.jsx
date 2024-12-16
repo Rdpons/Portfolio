@@ -20,13 +20,6 @@ const Chatbot = () => {
                         autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
                         },
                 },
-                tooltip: {
-                    showTooltip: true,
-                    tooltipMessage: 'Hi There 👋!',
-                    tooltipBackgroundColor: 'black',
-                    tooltipTextColor: 'white',
-                    tooltipFontSize: 16,
-                },
                 chatWindow: {
                     showTitle: true,
                     title: 'Flowise Bot',
