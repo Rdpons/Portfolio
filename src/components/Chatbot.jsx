@@ -3,8 +3,8 @@ import { BubbleChat } from 'flowise-embed-react';
 const Chatbot = () => {
   return (
     <BubbleChat
-            chatflowid="601e1cdc-6601-4145-a532-28d24b5c0d5b"
-            apiHost="https://ponsica-ponsica.hf.space"
+            chatflowid: "6690bfb1-6f4b-49aa-b4d1-134e107de62b",
+            apiHost: "https://ponsica-ponsica.hf.space",
             theme={{
                 button: {
                     backgroundColor: "#3B81F6",
