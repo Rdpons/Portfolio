@@ -5,6 +5,8 @@ const Chatbot = () => {
     <BubbleChat
             chatflowid: "6690bfb1-6f4b-49aa-b4d1-134e107de62b",
             apiHost: "https://ponsica-ponsica.hf.space",
+            chatflowConfig: {},
+            observersConfig: {},
             theme={{
                 button: {
                     backgroundColor: "#3B81F6",
