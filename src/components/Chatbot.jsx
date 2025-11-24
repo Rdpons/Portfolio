@@ -1,53 +1,80 @@
-import { BubbleChat } from 'flowise-embed-react';
+import { BubbleChat } from 'flowise-embed-react'
 
-const Chatbot = () => {
-  return (
-    <BubbleChat
-            chatflowid: "6690bfb1-6f4b-49aa-b4d1-134e107de62b",
-            apiHost: "https://ponsica-ponsica.hf.space",
-            chatflowConfig: {},
-            observersConfig: {},
-            theme={{
+const App = () => {
+    return (
+        <BubbleChat
+            chatflowid="4535e411-7ec5-4101-a28b-ebe096768d10"
+            apiHost="https://ponsica-ponsica.hf.space"
+            chatflowConfig={{
+                /* Chatflow Config */
+            }}
+            observersConfig={{
+                /* Observers Config */
+            }}
+            theme={{    
                 button: {
-                    backgroundColor: "#3B81F6",
+                    backgroundColor: '#3B81F6',
                     right: 20,
                     bottom: 20,
-                    size: 48, // small | medium | large | number
+                    size: 48,
                     dragAndDrop: true,
-                    iconColor: "white",
-                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                    iconColor: 'white',
+                    customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     autoWindowOpen: {
-                        autoOpen: true, //parameter to control automatic window opening
-                        openDelay: 2, // Optional parameter for delay time in seconds
-                        autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
-                        },
+                        autoOpen: true,
+                        openDelay: 2,
+                        autoOpenOnMobile: false
+                    }
                 },
+                tooltip: {
+                    showTooltip: true,
+                    tooltipMessage: 'Hi There 👋!',
+                    tooltipBackgroundColor: 'black',
+                    tooltipTextColor: 'white',
+                    tooltipFontSize: 16
+                },
+                disclaimer: {
+                    title: 'Disclaimer',
+                    message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                    textColor: 'black',
+                    buttonColor: '#3b82f6',
+                    buttonText: 'Start Chatting',
+                    buttonTextColor: 'white',
+                    blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                    backgroundColor: 'white'
+                },
+                customCSS: ``,
                 chatWindow: {
                     showTitle: true,
-                    title: 'Chat Bot',
-                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                     showAgentMessages: true,
-                    welcomeMessage: '',
+                    title: 'Flowise Bot',
+                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    welcomeMessage: 'Hello! This is custom welcome message',
                     errorMessage: 'This is a custom error message',
-                    backgroundColor: "#ffffff",
-                    backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                    backgroundColor: '#ffffff',
+                    backgroundImage: 'enter image path or link',
                     height: 700,
                     width: 400,
                     fontSize: 16,
-                    //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                    starterPrompts: [
+                        "What is a bot?",
+                        "Who are you?"
+                    ],
                     starterPromptFontSize: 15,
-                    clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                    clearChatOnReload: false,
+                    sourceDocsTitle: 'Sources:',
+                    renderHTML: true,
                     botMessage: {
-                        backgroundColor: "#f7f8ff",
-                        textColor: "#303235",
+                        backgroundColor: '#f7f8ff',
+                        textColor: '#303235',
                         showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
                     },
                     userMessage: {
-                        backgroundColor: "#3B81F6",
-                        textColor: "#ffffff",
+                        backgroundColor: '#3B81F6',
+                        textColor: '#ffffff',
                         showAvatar: true,
-                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                        avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
                     },
                     textInput: {
                         placeholder: 'Type your question',
@@ -56,25 +83,27 @@ const Chatbot = () => {
                         sendButtonColor: '#3B81F6',
                         maxChars: 50,
                         maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
-                        autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                        autoFocus: true,
                         sendMessageSound: true,
-                        // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                        sendSoundLocation: 'send_message.mp3',
                         receiveMessageSound: true,
-                        // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true.
+                        receiveSoundLocation: 'receive_message.mp3'
                     },
                     feedback: {
-                        color: '#303235',
+                        color: '#303235'
+                    },
+                    dateTimeToggle: {
+                        date: true,
+                        time: true
                     },
                     footer: {
                         textColor: '#303235',
-                        text: 'Created by',
-                        company: 'Rhodney Dame N. Ponsica',
-                        companyLink: 'https://ardii.vercel.app',
+                        text: 'Powered by',
+                        company: 'Flowise',
+                        companyLink: 'https://flowiseai.com'
                     }
                 }
-            }}
-        />    
-    );
+            }
+        />
+    )
 }
-
-export default Chatbot;
